@@ -112,57 +112,65 @@ class _ShoppingListState extends State<ShoppingList> {
               }).toList(),
             ),
           ),
-        ],
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          FloatingActionButton.large(
-            child: const Text('Add a Grocery'),
-            backgroundColor: Colors.orange,
-            heroTag: 'addGroceryButton',
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (_) {
-                    return ShoppingListDialog(onListAdded: _handleNewGrocery);
-                  });
-            }
-          ),
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.fromLTRB(16, 24, 16, 4),
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: Colors.green.shade100,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: Colors.green.shade700,
-              ),
-            ),
-            child:FloatingActionButton.large(
-            child: const Text('Checkout'),
-            backgroundColor: Colors.green,
-            heroTag: 'checkoutButton',
-            onPressed: () {
-              if (groceries.isEmpty) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('The list is already empty.'),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 50.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    foregroundColor: Colors.black,
+                    backgroundColor: Colors.yellow.shade100,
+                    side: const BorderSide(
+                      color: Colors.yellow,
+                      width: 0.8,
+                    ),
                   ),
-                );
-                return;
-              }
-              _handleCashOutGrocery();
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('You checked out. The list was cleared.'),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (_) {
+                        return ShoppingListDialog(onListAdded: _handleNewGrocery);
+                      }
+                    );
+                  },
+                  child: const Text('Add a Grocery'),
                 ),
-              );
-            }),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    foregroundColor: Colors.black,
+                    backgroundColor: Colors.green.shade100,
+                    side: const BorderSide(
+                      color: Colors.green,
+                      width: 0.8,
+                    ),
+                  ),
+                  onPressed: () {
+                    if (groceries.isEmpty) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('The list is already empty.'),
+                        ),
+                      );
+                      return;
+                    }
+                    _handleCashOutGrocery();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('You checked out. The list was cleared.'),
+                      ),
+                    );
+                  },
+                  child: const Text('Checkout')
+                ),
+              ]
+            ),
           ),
         ],
       ),
+      
     );
   }
 }

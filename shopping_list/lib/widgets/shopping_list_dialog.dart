@@ -19,9 +19,9 @@ class _ShoppingListDialogState extends State<ShoppingListDialog> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _priceController = TextEditingController();
   final ButtonStyle yesStyle = ElevatedButton.styleFrom(
-      textStyle: const TextStyle(fontSize: 20), backgroundColor: Colors.green);
+      textStyle: const TextStyle(fontSize: 20), backgroundColor: Colors.green.shade300, foregroundColor: Colors.black);
   final ButtonStyle noStyle = ElevatedButton.styleFrom(
-      textStyle: const TextStyle(fontSize: 20), backgroundColor: Colors.red);
+      textStyle: const TextStyle(fontSize: 20), backgroundColor: Colors.red.shade300, foregroundColor: Colors.black);
 
   String? _priceError;
 
