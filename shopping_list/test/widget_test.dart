@@ -146,8 +146,6 @@ void main() {
     expect(find.text('kiwi \$1.00'), findsNothing);
   });
 
-  // write this test
-  // put screenshots in readme
   testWidgets('Checkout does not change wallet cash', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: ShoppingList()));
 
