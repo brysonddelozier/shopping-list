@@ -118,13 +118,15 @@ class _ShoppingListState extends State<ShoppingList> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
+                  key: const Key('AddGroceryButton'),
                   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(160.0, 80.0),
                     textStyle: const TextStyle(fontSize: 20),
                     foregroundColor: Colors.black,
                     backgroundColor: Colors.yellow.shade100,
                     side: const BorderSide(
                       color: Colors.yellow,
-                      width: 0.8,
+                      width: 1.0,
                     ),
                   ),
                   onPressed: () {
@@ -135,16 +137,18 @@ class _ShoppingListState extends State<ShoppingList> {
                       }
                     );
                   },
-                  child: const Text('Add a Grocery'),
+                  child: const Text('Add Grocery'),
                 ),
                 ElevatedButton(
+                  key: const Key('CheckoutButton'),
                   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(160.0, 80.0),
                     textStyle: const TextStyle(fontSize: 20),
                     foregroundColor: Colors.black,
                     backgroundColor: Colors.green.shade100,
                     side: const BorderSide(
                       color: Colors.green,
-                      width: 0.8,
+                      width: 1.0,
                     ),
                   ),
                   onPressed: () {
@@ -163,7 +167,7 @@ class _ShoppingListState extends State<ShoppingList> {
                       ),
                     );
                   },
-                  child: const Text('Checkout')
+                  child: const Text('Checkout'),
                 ),
               ]
             ),

@@ -39,8 +39,8 @@ class _ShoppingListWalletState extends State<ShoppingListWallet> {
       child: Row(
         children: [
           const Icon(
-            Icons.account_balance_wallet,
-            color: Colors.green,
+            Icons.account_balance_wallet_outlined,
+            color: Colors.black,
           ),
           const SizedBox(width: 12),
           Text(

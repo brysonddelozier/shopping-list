@@ -63,6 +63,7 @@ class _ShoppingListDialogState extends State<ShoppingListDialog> {
       content: Column(
         children: [
           TextField(
+            key: const Key('NameTextField'),
             controller: _nameController,
             decoration: const InputDecoration(
               labelText: 'Grocery Name',
@@ -71,6 +72,7 @@ class _ShoppingListDialogState extends State<ShoppingListDialog> {
           ),
           const SizedBox(height: 16),
           TextField(
+            key: const Key('PriceTextField'),
             controller: _priceController,
             keyboardType: const TextInputType.numberWithOptions(
               decimal: true,
