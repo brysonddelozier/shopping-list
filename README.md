@@ -11,6 +11,10 @@ The app allows you to add and remove items from the shopping list, while keeping
 While it's intended as a shopping list, it could be used as a budgeting tool for any market.
 
 ### Screenshots
+![App at bootup](shopping_list/images/shopping_list_bootup.png)
+![Dialogue users see after clicking 'Add Grocery'](shopping_list/images/shopping_list_dialogue.png)
+![Shopping list with an item](shopping_list/images/shopping_list_with_item.png)
+![List cleared after checking out](shopping_list/images/shopping_list_after_checkout.png)
 
 ### Sources
 #### Colors and Color Shading
@@ -34,7 +38,16 @@ This page helped me understand how to outline my buttons.
 https://api.flutter.dev/flutter/dart-ui/Size-class.html 
 This page helped me customize the size of my elevated buttons.
 
-#### The Wallet Icon
+#### The Wallet
 https://api.flutter.dev/flutter/material/Icons-class.html 
 This is the page for the flutter icon class, which is a library of thousands of icons you can use in your flutter projects! I used 'account_balance_wallet_outlined'.
+
+https://api.flutter.dev/flutter/painting/CircleBorder-class.html 
+This is the page that helped me achieve the rounded border.
+
+https://api.flutter.dev/flutter/widgets/Padding-class.html 
+This page helped me correct my padding for the wallet.
+
+https://api.flutter.dev/flutter/painting/Border-class.html 
+This is the border class, which I used to create the dark green outline of the wallet widget.
 
