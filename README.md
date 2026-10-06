@@ -11,14 +11,17 @@ The app allows you to add and remove items from the shopping list, while keeping
 While it's intended as a shopping list, it could be used as a budgeting tool for any market.
 
 ### Screenshots
+#### App at bootup
 <img src="shopping_list/images/shopping_list_bootup.png" alt="App at bootup" width="200"/>
+
+#### Dialogue users see after clicking 'Add Grocery'
 <img src="shopping_list/images/shopping_list_dialogue.png" alt="Dialogue users see after clicking 'Add Grocery'" width="200"/>
+
+#### Shopping list with an item
 <img src="shopping_list/images/shopping_list_with_item.png" alt="Shopping list with an item" width="200"/>
+
+#### List cleared after checking out
 <img src="shopping_list/images/shopping_list_after_checkout.png" alt="List cleared after checking out" width="200"/>
-![App at bootup](shopping_list/images/shopping_list_bootup.png)
-![Dialogue users see after clicking 'Add Grocery'](shopping_list/images/shopping_list_dialogue.png)
-![Shopping list with an item](shopping_list/images/shopping_list_with_item.png)
-![List cleared after checking out](shopping_list/images/shopping_list_after_checkout.png)
 
 ### Sources
 #### Colors and Color Shading
